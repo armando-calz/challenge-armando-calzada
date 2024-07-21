@@ -37,6 +37,7 @@ include 'includes/header.php';
         </tbody>
     </table>
     
-    <a href="clients/create.php" class="btn btn-primary mb-3">Nuevo Cliente</a>
+    <a href="clients/create.php" class="btn btn-primary mb-3">Crear Cliente</a>
+    <a href="accounts/create.php" class="btn btn-primary mb-3">Crear Cuenta</a>
 </div>
 <?php include 'includes/footer.php'; ?>

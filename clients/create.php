@@ -38,7 +38,12 @@ include '../includes/header.php';
         </div>
         <div class="form-group">
             <label>Sexo:</label>
-            <input type="text" id="sexo" name="sexo" class="form-control" required>
+            <select id="sexo" name="sexo" class="form-control" required>
+                <option value="">--Selecciona una opción--</option>
+                <option value="1">Masculino</option>
+                <option value="2">Femenino</option>
+                <option value="3">Otro</option>
+            </select>
         </div>
         <div class="form-group">
             <label>Correo Electrónico:</label>
@@ -46,10 +51,10 @@ include '../includes/header.php';
         </div>
         <div class="form-group">
             <label>CURP:</label>
-            <input type="text" id="curp" name="curp" class="form-control" required>
+            <input type="text" id="curp" name="curp" class="form-control" maxlength="18" required>
         </div>
         <button type="submit" class="btn btn-primary">Crear Cliente</button>
     </form>
-    
+    <a href="../index.php" class="btn btn-secondary mt-3">Volver</a>
 </div>
 <?php include '../includes/footer.php'; ?>
