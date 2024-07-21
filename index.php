@@ -15,7 +15,7 @@ include 'includes/header.php';
                 <th>Sexo</th>
                 <th>Correo</th>
                 <th>CURP</th>
-                <th>Accione</th>
+                <!--<th>Accione</th>-->
             </tr>
         </thead>
         <tbody>
@@ -28,14 +28,15 @@ include 'includes/header.php';
                 <td><?= $cliente['sexo'] ?></td>
                 <td><?= $cliente['correo_electronico'] ?></td>
                 <td><?= $cliente['curp'] ?></td>
-                <td>
-                    
-                </td>
+                <!--<td>
+                    <a href="edit.php?id=" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="delete.php?id=" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>-->
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
     
-    <a href="create.php" class="btn btn-primary mb-3">Nuevo Cliente</a>
+    <a href="clients/create.php" class="btn btn-primary mb-3">Nuevo Cliente</a>
 </div>
 <?php include 'includes/footer.php'; ?>
