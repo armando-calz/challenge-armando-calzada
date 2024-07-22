@@ -1,31 +1,29 @@
 # challenge-armando-calzada
 Implementación de una página web para la gestión de clientes y cuentas.
-# Requisitos
-XAMPP
-# Instrucciones de instalación
-Instalar XAMPP:
 
-Descarga e instala XAMPP desde 
+## Requisitos
+* XAMPP
 
-Clonar el proyecto desde Git:
+## Instrucciones de instalación
+**Instalar XAMPP:**
 
-Configurar la base de datos:
+* Realizar la instalación de XAMPP desde https://www.apachefriends.org/es/download.html
 
-Navega hasta la carpeta clonada del proyecto.
-Copia la carpeta clientes_cuentas del directorio challenge-armando-calzada y pégala en la carpeta mysql/data de tu instalación de XAMPP. La ruta completa debería ser:
-kotlin
-Copiar código
-C:\xampp\mysql\data
-Configurar el proyecto en XAMPP:
+**Clonar el proyecto desde Git:**
 
-Copia la carpeta challenge-proyect del directorio challenge-armando-calzada y pégala en la carpeta htdocs de tu instalación de XAMPP. La ruta completa debería ser:
-makefile
-Copiar código
+* El proyecto debe situarse en la carpeta htdocs de tu instalación de XAMPP. La ruta completa debería ser:
 C:\xampp\htdocs
-Iniciar los servicios de XAMPP:
 
-Abre el Panel de Control de XAMPP.
-Inicia los servicios de Apache y MySQL.
-Acceder al proyecto:
+**Configurar la base de datos:**
 
-Abre tu navegador web y navega a http://localhost/challenge-proyect.
+* Copia la carpeta clientes_cuentas del directorio challenge-armando-calzada y pégala en la carpeta mysql/data de tu instalación de XAMPP. La ruta completa debería ser:
+C:\xampp\mysql\data
+
+**Iniciar los servicios de XAMPP:**
+
+* Abre el Panel de Control de XAMPP.
+* Inicia los servicios de Apache y MySQL.
+
+**Acceder al proyecto:**
+
+* Abre tu navegador web y navega a http://localhost/challenge-armando-calzada/public/
