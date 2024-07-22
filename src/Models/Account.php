@@ -30,5 +30,11 @@ class Account
     {
         $stmt = $this->conn->prepare("DELETE FROM cuentas WHERE id_cuenta = '$id'");
         return $stmt->execute();
+    } 
+
+    public function deleteByClient($id)
+    {
+        $stmt = $this->conn->prepare("DELETE FROM cuentas WHERE id_cliente = '$id'");
+        return $stmt->execute();
     }
 }

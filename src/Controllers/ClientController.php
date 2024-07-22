@@ -1,7 +1,8 @@
 <?php
-//namespace App\Controllers; 
 require '../Models/Client.php';
+require '../Models/Account.php';
 use App\Models\Client;
+use App\Models\Account;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -61,6 +62,10 @@ function deleteClient() {
 
     $client = new Client();
     $client->delete($id);
+
+    $clientAccount = new Account();
+    $clientAccount->deleteByClient($id);
+
     header('Location: ../../public/index.php');
 }
 ?>
