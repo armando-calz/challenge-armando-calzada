@@ -1,7 +1,7 @@
 <?php
-require 'includes/database.php';
+require '../includes/database.php';
 $clientes = $connection->query('SELECT * FROM clientes');
-include 'includes/header.php';
+include '../includes/header.php';
 ?>
 <div class="container">
     <h1 class="my-5">Clientes</h1>
@@ -26,7 +26,7 @@ include 'includes/header.php';
                 <td><?= $cliente['materno'] ?></td>
                 <td><?= $cliente['edad'] ?></td>
                 <td><?= $cliente['sexo'] ?></td>
-                <td><?= $cliente['correo_electronico'] ?></td>
+                <td><?= $cliente['correo'] ?></td>
                 <td><?= $cliente['curp'] ?></td>
                 <!--<td>
                     <a href="edit.php?id=" class="btn btn-warning btn-sm">Editar</a>
@@ -37,7 +37,7 @@ include 'includes/header.php';
         </tbody>
     </table>
     
-    <a href="clients/create.php" class="btn btn-primary mb-3">Crear Cliente</a>
-    <a href="accounts/create.php" class="btn btn-primary mb-3">Crear Cuenta</a>
+    <a href="../src/Views/clients/create.php" class="btn btn-primary mb-3">Crear Cliente</a>
+    <a href="../src/Views/accounts/create.php" class="btn btn-primary mb-3">Crear Cuenta</a>
 </div>
-<?php include 'includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
