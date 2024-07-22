@@ -7,7 +7,7 @@ $cuenta = $cuentas->fetch_assoc();
 include '../../../includes/header.php';
 ?>
 
-<div class="container">
+<div class="container ">
     <h1 class="mt-5">Eliminar Cuenta</h1>
     <form action="../../controllers/AccountController.php?action=deleteAccount&id=<?=$id?>" method="POST">
         <h2>¿Está seguro que desea Eliminar la cuenta? No. cuenta: <?=$cuenta['numero_cuenta']?></h2>
