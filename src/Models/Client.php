@@ -23,14 +23,13 @@ class Client
 
     public function edit($id, $data)
     {
-        $stmt = $this->db->prepare("UPDATE clients SET name = :name, email = :email WHERE id = :id");
-        $data['id'] = $id;
+        $stmt = $this->conn->prepare("UPDATE clientes SET nombre = ?, paterno = ?, materno = ?, edad = ?, sexo = ?, correo = ?, curp = ? WHERE id_cliente = '$id'");
         return $stmt->execute($data);
     }
 
     public function delete($id)
     {
-        $stmt = $this->db->prepare("DELETE FROM clients WHERE id = :id");
-        return $stmt->execute(['id' => $id]);
+        $stmt = $this->conn->prepare("DELETE FROM clientes WHERE id_cliente = '$id'");
+        return $stmt->execute();
     }
 }

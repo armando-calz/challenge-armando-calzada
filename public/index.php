@@ -15,7 +15,7 @@ include '../includes/header.php';
                 <th>Sexo</th>
                 <th>Correo</th>
                 <th>CURP</th>
-                <!--<th>Accione</th>-->
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -28,16 +28,24 @@ include '../includes/header.php';
                 <td><?= $cliente['sexo'] ?></td>
                 <td><?= $cliente['correo'] ?></td>
                 <td><?= $cliente['curp'] ?></td>
-                <!--<td>
-                    <a href="edit.php?id=" class="btn btn-warning btn-sm">Editar</a>
-                    <a href="delete.php?id=" class="btn btn-danger btn-sm">Eliminar</a>
-                </td>-->
+                <td>
+                    <a href="../src/Views/clients/edit.php?id=<?= $cliente['id_cliente']?>" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="../src/Views/clients/delete.php?id=<?= $cliente['id_cliente']?>" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+    <div class="row">
+        <div class="col-md-9">
+                <a href="../src/Views/Accounts/view.php" class="btn btn-primary mb-3 float-right">Ver cuentas</a>
+        </div>
+        <div class="col-md-3">
+            <a href="../src/Views/clients/create.php" class="btn btn-primary mb-3">Crear Cliente</a>
+            <a href="../src/Views/accounts/create.php" class="btn btn-primary mb-3">Crear Cuenta</a>
+        </div>
+    </div>
     
-    <a href="../src/Views/clients/create.php" class="btn btn-primary mb-3">Crear Cliente</a>
-    <a href="../src/Views/accounts/create.php" class="btn btn-primary mb-3">Crear Cuenta</a>
+    
 </div>
 <?php include '../includes/footer.php'; ?>

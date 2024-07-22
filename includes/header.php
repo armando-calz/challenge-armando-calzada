@@ -8,9 +8,11 @@
 </head>
 <body>
 <div class="container">
-    <header class="py-3 mb-4 border-bottom">
-        <a class="mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <span class="fs-4">Sistema de gestión de clientes y cuentas</span>
-        </a>
+    <header class="row py-3 mb-4 border-bottom">
+        <div class="col-md-10">
+            <a class="mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <span class="fs-4">Sistema de gestión de clientes y cuentas</span>
+            </a>
+        </div>
     </header>
 </div>

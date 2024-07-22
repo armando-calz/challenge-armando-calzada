@@ -42,15 +42,26 @@ function addClient() {
 }
 
 function updateClient() {
-    // Lógica para actualizar un cliente
-    echo 'Actualizar cliente';
-    // Aquí puedes manejar la lógica para actualizar un cliente
+    $id = $_GET['id'];
+    $nombre = $_POST['nombre'];
+    $paterno = $_POST['paterno'];
+    $materno = $_POST['materno'];
+    $edad = $_POST['edad'];
+    $sexo = $_POST['sexo'];
+    $correo = $_POST['correo'];
+    $curp = $_POST['curp'];
+
+    $client = new Client();
+    $client->edit($id,[$nombre, $paterno, $materno, $edad, $sexo, $correo, $curp]);
+    header('Location: ../../public/index.php');
 }
 
 function deleteClient() {
-    // Lógica para eliminar un cliente
-    echo 'Eliminar cliente';
-    // Aquí puedes manejar la lógica para eliminar un cliente
+    $id = $_GET['id'];
+
+    $client = new Client();
+    $client->delete($id);
+    header('Location: ../../public/index.php');
 }
 ?>
 

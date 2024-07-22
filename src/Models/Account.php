@@ -15,21 +15,20 @@ class Account
 
     public function create($data)
     {
-        $stmt =  $this->conn->prepare('INSERT INTO cuentas (numero_cuenta, id_cliente, fecha_creacion, estado) VALUES (?, ?, ?, ?)');
+        $stmt =  $this->conn->prepare('INSERT INTO cuentas (numero_cuenta, id_cliente, estado, tipo_cuenta) VALUES (?, ?, ?, ?)');
         return $stmt->execute($data);
         
     }
 
     public function edit($id, $data)
     {
-        $stmt = $this->db->prepare("UPDATE clients SET name = :name, email = :email WHERE id = :id");
-        $data['id'] = $id;
+        $stmt = $this->conn->prepare("UPDATE cuentas SET numero_cuenta = ?, id_cliente = ?, estado = ?, tipo_cuenta = ? WHERE id_cuenta = '$id'");
         return $stmt->execute($data);
     }
 
     public function delete($id)
     {
-        $stmt = $this->db->prepare("DELETE FROM clients WHERE id = :id");
-        return $stmt->execute(['id' => $id]);
+        $stmt = $this->conn->prepare("DELETE FROM cuentas WHERE id_cuenta = '$id'");
+        return $stmt->execute();
     }
 }
